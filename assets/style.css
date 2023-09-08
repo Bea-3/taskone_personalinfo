@@ -1,10 +1,40 @@
 body{
     max-width: 1200px;
-    border:1px solid red;
+    /* border:1px solid red; */
     padding:20px;
     min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #e9fff9;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#1E1A1A;
 }
 
 .profile-pic img{
-    width:20%;
+    width:30%;
+    border-radius: 10px;
 }
+
+main{
+    /* border:1px solid green; */
+    
+    border-radius: 20px;
+    width: 600px;
+    align-self: center;
+    margin: 0px auto;
+    padding:20px 10px;
+    background-color: #9ed8db;
+    text-align: center;
+}
+
+h2{
+    padding:20px 0;
+    font-size:1.6em ;
+}
+
+a{
+    text-decoration: none;
+    color:#1E1A1A;
+    cursor:pointer;
+}
+p{font-size: 1.1em;}

@@ -10,12 +10,16 @@
 </head>
 <body>
     <header>
-        <h2>Personal Information</h2>
+        
     </header>
     <main>
+        <h2>Personal Information</h2>
         <section>
             <div class="uname">
-                <p data-testid="slackUserName">Slack Name: Bea</p>
+                <p>
+                    Slack Name: 
+                    <span data-testid="slackUserName">Bea</span>
+                </p>
             </div>
             <div class="profile-pic">
                 <img src="./assets/images/bprofilepic.JPG" alt="Bea" data-testid="slackDisplayImage">
@@ -32,7 +36,7 @@
                 <p> Track: <span data-testid="myTrack">Frontend</span></p>
             </div>
             <div class="github">
-                <p>GitHub: <a href=""></a></p>
+                <a href="https://github.com/Bea-3/taskone_personalinfo" data-testid=“githubURL”>GitHub</a>
             </div>
         </section>
     </main>
@@ -42,8 +46,12 @@
         function currentDate(){   
 
             // var date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear()
+
+            // to display date in full 
             const options = {weekday:'long', month:'short', day:'numeric',year: 'numeric'}
             var formated = today.toLocaleDateString('en-uk', options);
+
+            // to display only the current day
             const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             let day = days[today.getDay()]
 
