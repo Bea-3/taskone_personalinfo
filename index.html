@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Beatrice Pepple">
+    <title>Bea Personal Info</title>
+
+    <link href="./assets/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2>Personal Information</h2>
+    </header>
+    <main>
+        <section>
+            <div class="uname">
+                <p data-testid="slackUserName">Slack Name: Bea</p>
+            </div>
+            <div class="profile-pic">
+                <img src="./assets/images/bprofilepic.JPG" alt="Bea" data-testid="slackDisplayImage">
+            </div>
+            <div class="date">
+                <p> Date: <span id="day" data-testid="currentDayOfTheWeek"></span></p>
+            </div>
+            <div class="time">
+                <p> Time: <span id="utc-time" data-testid="currentUTCTime"></span></p>
+                
+            </div>
+            <div class="track">
+
+                <p> Track: <span data-testid="myTrack">Frontend</span></p>
+            </div>
+            <div class="github">
+                <p>GitHub: <a href=""></a></p>
+            </div>
+        </section>
+    </main>
+    <script>
+        var today = new Date();
+        
+        function currentDate(){   
+
+            // var date = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear()
+            const options = {weekday:'long', month:'short', day:'numeric',year: 'numeric'}
+            var formated = today.toLocaleDateString('en-uk', options);
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            let day = days[today.getDay()]
+
+            document.getElementById("day").innerHTML = day;
+        }
+        currentDate()
+
+        function currentTime(){
+            var time = today.getUTCHours() + ':'+ today.getUTCMinutes() + ':' + today.getUTCSeconds() + ':'+ today.getUTCMilliseconds() ;
+
+            document.getElementById("utc-time").innerHTML=time;
+            
+        }
+        currentTime()
+    </script>
+</body>
+</html>

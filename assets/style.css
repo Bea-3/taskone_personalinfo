@@ -1,0 +1,10 @@
+body{
+    max-width: 1200px;
+    border:1px solid red;
+    padding:20px;
+    min-height: 50vh;
+}
+
+.profile-pic img{
+    width:20%;
+}
